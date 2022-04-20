@@ -3,7 +3,6 @@ module br.edu.femass.library_system {
     requires javafx.fxml;
     requires xstream;
     requires static lombok;
-    requires org.json;
     requires com.google.gson;
 
 

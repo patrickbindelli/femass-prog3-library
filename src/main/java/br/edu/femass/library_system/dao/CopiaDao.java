@@ -1,13 +1,19 @@
 package br.edu.femass.library_system.dao;
 
+import br.edu.femass.library_system.model.Autor;
 import br.edu.femass.library_system.model.Copia;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
 
+import java.io.*;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
 public class CopiaDao implements Dao<Copia>{
 
-    public static List<Copia> copias = new ArrayList<>();
+    private List<Copia> copias = new ArrayList<>();
 
     @Override
     public void create(Copia objeto) throws Exception {

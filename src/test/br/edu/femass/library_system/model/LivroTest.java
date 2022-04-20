@@ -46,7 +46,6 @@ class LivroTest {
                     Genero.TECNOLOGIA_E_CIENCIA, 0, 0);
         });
 
-
         assertThrows(InvalidParameterException.class, () -> {
             Livro livro = new Livro("Refactoring", 1999, 1,
                     null,

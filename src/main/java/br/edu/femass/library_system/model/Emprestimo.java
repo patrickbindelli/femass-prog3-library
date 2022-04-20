@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 public class Emprestimo {
     private final Date dataEmprestimo = new Date();
     private Date dataDevolucao;
-    private final Usuario usuario;
+    private transient final Usuario usuario;
     private final Copia copia;
 
     public Emprestimo(Usuario usuario, Copia copia){

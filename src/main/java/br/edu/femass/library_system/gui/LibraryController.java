@@ -49,6 +49,9 @@ public class LibraryController implements Initializable {
     private Label lblVersion;
     @FXML
     private Label lblStatus;
+
+    @FXML
+    private Label lblEmprestimosHeader;
     @FXML
     private Button btnNovoLivro;
     @FXML
@@ -108,6 +111,7 @@ public class LibraryController implements Initializable {
         handleTxtFixasChange();
 
         setDefaultStatus();
+        lblEmprestimosHeader.setText("Código\tEmpréstimos\tDevolução");
     }
     //endregion Method
 

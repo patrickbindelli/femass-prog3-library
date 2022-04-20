@@ -66,7 +66,7 @@ public class UserCadController implements Initializable {
         window.initModality(Modality.APPLICATION_MODAL);
         window.setTitle("Cadastrar Usuario");
 
-        window.showAndWait();
+        window.show();
     }
 
     @Override

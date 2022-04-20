@@ -7,4 +7,10 @@ public class Professor extends Usuario{
         super(nome, cpf, matricula, 5);
         this.departamento = departamento;
     }
+
+
+    @Override
+    public String toString() {
+        return super.toString() + " - " + this.departamento;
+    }
 }

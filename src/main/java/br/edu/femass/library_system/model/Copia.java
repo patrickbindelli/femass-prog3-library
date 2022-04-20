@@ -9,8 +9,8 @@ import java.util.UUID;
 public class Copia {
     private String codigo = UUID.randomUUID().toString().substring(0, 6);
     private Boolean fixo;
-    private Livro livro;
-    private Emprestimo emprestimo;
+    private transient Livro livro;
+    private transient Emprestimo emprestimo;
 
     public Copia(Boolean fixo, Livro livro) {
         if (livro == null) throw new InvalidParameterException();

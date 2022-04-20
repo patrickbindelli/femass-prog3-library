@@ -7,4 +7,9 @@ public class Aluno extends Usuario{
         super(nome, cpf, matricula, 5);
         this.curso = curso;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + " - " + this.curso;
+    }
 }

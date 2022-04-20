@@ -1,9 +1,15 @@
 package br.edu.femass.library_system.dao;
 
+import br.edu.femass.library_system.model.Copia;
 import br.edu.femass.library_system.model.Emprestimo;
 import br.edu.femass.library_system.model.Livro;
 import br.edu.femass.library_system.model.Usuario;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
 
+import java.io.*;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 

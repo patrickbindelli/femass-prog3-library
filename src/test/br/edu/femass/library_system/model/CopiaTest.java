@@ -15,9 +15,7 @@ class CopiaTest {
     Integer nrCopiasFixas = 1;
     Autor autor = new Autor("Kent", "Beck");
     Livro livro = new Livro(titulo, ano, edicao, autor, genero, nrCopias, nrCopiasFixas);
-
     CopiaTest() throws Exception {}
-
     @Test
     void CopiaCannotExistWithoutLivro(){
         assertThrows(InvalidParameterException.class, () -> {

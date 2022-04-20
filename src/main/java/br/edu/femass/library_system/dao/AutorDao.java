@@ -11,27 +11,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AutorDao implements Dao<Autor> {
-    File file = new File("src/persistencia/autores.json");
-    private static final Gson gson = new GsonBuilder().setPrettyPrinting().create();
     private static List<Autor> autores = new ArrayList<>();
-
-    public AutorDao(){
-        try{
-            Type listType = new TypeToken<List<Autor>>() {}.getType();
-            autores = gson.fromJson(new FileReader(file), listType);
-        }catch (FileNotFoundException e){
-            autores = new ArrayList<>();
-        }
-    }
 
     @Override
     public void create(Autor objeto) throws Exception {
         autores.add(objeto);
-
-        Writer writer = new FileWriter(file);
-        gson.toJson(autores, writer);
-        writer.flush();
-        writer.close();
     }
 
     @Override

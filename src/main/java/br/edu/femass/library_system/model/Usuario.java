@@ -1,5 +1,6 @@
 package br.edu.femass.library_system.model;
 
+import com.google.gson.annotations.Expose;
 import lombok.Data;
 
 import java.util.ArrayList;
@@ -7,11 +8,12 @@ import java.util.List;
 
 @Data
 public abstract class Usuario {
+
     protected String nome;
     protected String cpf;
     protected String matricula;
     protected Integer prazoEntrega;
-    protected List<Emprestimo> emprestimos = new ArrayList<>();
+    protected transient List<Emprestimo> emprestimos = new ArrayList<>();
 
     public Usuario(String nome, String cpf, String matricula, Integer prazoEntrega) {
         this.nome = nome;
@@ -29,7 +31,7 @@ public abstract class Usuario {
         this.emprestimos.forEach(i -> {
             if (i.getDataDevolucao() == null) emprestimosAtivos.add(i);
         });
-        if(emprestimosAtivos.size() == prazoEntrega) throw new Exception("Limite de empréstimos atingidos para esse usuario");
+        if(emprestimosAtivos.size() == 5) throw new Exception("Limite de empréstimos atingidos para esse usuario");
         this.emprestimos.add(emprestimo);
     }
 

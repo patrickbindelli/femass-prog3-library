@@ -16,9 +16,8 @@ public class LibraryApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load());
         scene.setUserData(fxmlLoader.getController());
         stage.setTitle("Biblioteca Prog 3");
-        Rectangle2D screenBounds = Screen.getPrimary().getVisualBounds();
+        stage.setMinHeight(600);
         stage.setMinWidth(800);
-        stage.setWidth(screenBounds.getWidth() * 0.7);
         stage.centerOnScreen();
         stage.setScene(scene);
         stage.show();

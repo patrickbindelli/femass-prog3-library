@@ -1,6 +1,7 @@
 package br.edu.femass.library_system.dao;
 
 import br.edu.femass.library_system.model.Autor;
+import br.edu.femass.library_system.model.Emprestimo;
 import br.edu.femass.library_system.model.Livro;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -17,6 +18,7 @@ import java.util.List;
 public class LivroDao implements Dao<Livro>{
 
     private static ArrayList<Livro> livros = new ArrayList<>();
+
 
     @Override
     public void create(Livro objeto) throws Exception {
